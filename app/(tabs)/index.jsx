@@ -40,17 +40,6 @@ export default function Index() {
       .catch((error) => console.error("Error fetching product data:", error));
   }, []);
 
-  const handleSearch = () => {
-    if (searchQuery.trim()) {
-      router.push({
-        pathname: "/search/[query]",
-        params: { query: searchQuery },
-      });
-    } else {
-      alert("Please enter a product name to search.");
-    }
-  };
-
   // Slider Render Item
   const renderSliderItem = ({ item }) => (
     <View style={styles.sliderItem}>
